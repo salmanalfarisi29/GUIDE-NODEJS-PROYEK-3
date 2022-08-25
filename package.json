@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/salmanalfarisi29/GUIDE-NODEJS-PROYEK-3/issues"
   },
-  "homepage": "https://github.com/salmanalfarisi29/GUIDE-NODEJS-PROYEK-3#readme"
+  "homepage": "https://github.com/salmanalfarisi29/GUIDE-NODEJS-PROYEK-3#readme",
+  "dependencies": {
+    "validator": "^10.8.0"
+  }
 }
