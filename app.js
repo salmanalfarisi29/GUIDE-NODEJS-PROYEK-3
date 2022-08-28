@@ -8,7 +8,7 @@ if (command === 'add') {
  console.log('Removing note!')
 } */
 
-const yargs = require('yargs')
+/*const yargs = require('yargs')
 yargs.version('1.1.0')
 yargs.command({
  command: 'add',
@@ -38,5 +38,24 @@ console.log('Starting')
 setTimeout(() => {
     console.log('2 Second Timer')
    }, 2000)
-   console.log('Stopping')
+   console.log('Stopping')*/
+
+
+   const https = require('https')
+   const url =
+   'https://api.darksky.net/forecast/9d1465c6f3bb7a6c71944bdd8548d026/40,-75'
+   const request = https.request(url, (response) => {
+    let data = ''
+    response.on('data', (chunk) => {
+    data = data + chunk.toString()
+    })
+    response.on('end', () => {
+    const body = JSON.parse(data)
+    console.log(body)
+    })
+   })
+   request.on('error', (error) => {
+    console.log('An error', error)
+   })
+   request.end(
 
